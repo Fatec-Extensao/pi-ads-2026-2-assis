@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastrar Nova Pesquisa | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<header><small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small><h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../login.html">Login</a></li><li><a href="../main.html">Painel do Sistema</a></li></ul></nav></header>
+<main id="conteudo-principal"><section><h2>Cadastrar Nova Pesquisa (US-ADM-01)</h2><p>Preencha os dados da pesquisa: título, descrição, período de aplicação e status.</p></section><section><h2>Dados da pesquisa</h2><form id="pf">
+<label for="t">Título</label><input id="t" type="text" required>
+<label for="d">Descrição</label><input id="d" type="text" required>
+<label for="i">Data de início</label><input id="i" type="date" required>
+<label for="e">Data de término</label><input id="e" type="date" required>
+<label for="s">Status</label><select id="s"><option>Rascunho</option><option>Em análise</option></select>
+<p><button type="submit">Salvar pesquisa</button> <button type="reset" class="sec">Limpar</button></p></form><p id="m" class="hint" role="status"></p></section>
+<section><h2>Pesquisas cadastradas</h2><table><thead><tr><th>Título</th><th>Período</th><th>Status</th></tr></thead><tbody id="tb"><tr><td>Satisfação Institucional 2026</td><td>01/03/2026 a 31/03/2026</td><td>Aprovada</td></tr></tbody></table></section><script>(function(){var R=document.currentScript.parentElement;function q(s){return R.querySelector(s)}q("#pf").addEventListener("submit",function(e){e.preventDefault();var a=q("#i").value,b=q("#e").value;if(b<a){q("#m").textContent="A data de término deve ser posterior à data de início.";return}
+var r=q("#tb").insertRow();[q("#t").value,a.split("-").reverse().join("/")+" a "+b.split("-").reverse().join("/"),q("#s").value].forEach(function(v){r.insertCell().textContent=v});q("#m").textContent="Pesquisa salva com sucesso.";this.reset()})})();</script><p><a class="btn" href="../main.html">← Voltar ao painel</a></p></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p></footer>
+</body></html>

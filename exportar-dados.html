@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerar Insights e Exportar Dados | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<header><small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small><h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../login.html">Login</a></li><li><a href="../main.html">Painel do Sistema</a></li></ul></nav></header>
+<main id="conteudo-principal"><section><h2>Gerar Insights e Exportar Dados (US-ANA-02)</h2><p>Exporte os dados consolidados para ferramentas externas.</p></section><section><h2>Exportação</h2><p>Os dados exportados são anônimos e não identificam participantes.</p><p><button id="c">Exportar CSV</button> <button id="p" class="sec">Exportar PDF (imprimir)</button></p>
+<table><thead><tr><th>Categoria</th><th>Respostas</th><th>Participação</th></tr></thead><tbody><tr><td>Alunos</td><td>96</td><td>80%</td></tr><tr><td>Professores</td><td>31</td><td>77,5%</td></tr><tr><td>Colaboradores</td><td>20</td><td>80%</td></tr></tbody></table></section><script>(function(){var R=document.currentScript.parentElement;function q(s){return R.querySelector(s)}q("#c").onclick=function(){var t="categoria;respostas;participacao\nAlunos;96;80%\nProfessores;31;77,5%\nColaboradores;20;80%";var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download="dados.csv";a.click()};q("#p").onclick=function(){window.print()}})();</script><p><a class="btn" href="../main.html">← Voltar ao painel</a></p></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p></footer>
+</body></html>

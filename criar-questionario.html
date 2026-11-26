@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar Questionário por Categoria | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<header><small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small><h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../login.html">Login</a></li><li><a href="../main.html">Painel do Sistema</a></li></ul></nav></header>
+<main id="conteudo-principal"><section><h2>Criar Questionário por Categoria (US-ADM-03)</h2><p>Cadastre perguntas e alternativas e associe-as a uma categoria de participantes.</p></section><section><h2>Nova pergunta</h2><form id="qf">
+<label for="p">Pesquisa</label><select id="p"><option>Satisfação Institucional 2026</option><option>Clima Organizacional</option></select>
+<label for="c">Categoria</label><select id="c"><option>Alunos</option><option>Professores</option><option>Colaboradores</option></select>
+<label for="x">Texto da pergunta</label><input id="x" type="text" required>
+<label for="y">Tipo</label><select id="y"><option>Múltipla escolha (uma)</option><option>Múltipla escolha (várias)</option><option>Escala</option><option>Aberta</option></select>
+<label for="a">Alternativas (uma por linha)</label><textarea id="a" rows="4" style="width:100%"></textarea>
+<p><button type="submit">Adicionar pergunta</button></p></form></section>
+<section><h2>Perguntas do questionário</h2><table><thead><tr><th>Categoria</th><th>Pergunta</th><th>Tipo</th><th>Alternativas</th></tr></thead><tbody id="tb"></tbody></table></section><script>(function(){var R=document.currentScript.parentElement;function q(s){return R.querySelector(s)}q("#qf").addEventListener("submit",function(e){e.preventDefault();var r=q("#tb").insertRow();[q("#c").value,q("#x").value,q("#y").value,q("#a").value.split("\n").filter(Boolean).length||"—"].forEach(function(v){r.insertCell().textContent=v});this.reset()})})();</script><p><a class="btn" href="../main.html">← Voltar ao painel</a></p></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p></footer>
+</body></html>

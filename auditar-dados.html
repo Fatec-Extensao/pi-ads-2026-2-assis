@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditar os Dados Coletados | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<header><small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small><h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../login.html">Login</a></li><li><a href="../main.html">Painel do Sistema</a></li></ul></nav></header>
+<main id="conteudo-principal"><section><h2>Auditar os Dados Coletados (US-AUD-01)</h2><p>Consulte o registro de auditoria. Valores de exemplo.</p></section><section><h2>Log de auditoria</h2><label for="f">Filtrar por ação</label><select id="f"><option value="">Todas</option><option>Criar pesquisa</option><option>Aprovar pesquisa</option><option>Gerar senhas</option><option>Exportar dados</option></select>
+<table><thead><tr><th>Data/hora</th><th>Ação</th><th>Tabela afetada</th><th>Perfil</th></tr></thead><tbody id="tb">
+<tr><td>10/03/2026 09:12</td><td>Criar pesquisa</td><td>Pesquisa</td><td>Administrador</td></tr>
+<tr><td>11/03/2026 14:30</td><td>Aprovar pesquisa</td><td>Pesquisa</td><td>Secretaria</td></tr>
+<tr><td>12/03/2026 08:05</td><td>Gerar senhas</td><td>TokenAnonimo</td><td>Administrador</td></tr>
+<tr><td>20/03/2026 16:47</td><td>Exportar dados</td><td>Resposta</td><td>Analista de Dados</td></tr></tbody></table></section><script>(function(){var R=document.currentScript.parentElement;function q(s){return R.querySelector(s)}q("#f").onchange=function(){var v=this.value;R.querySelectorAll("#tb tr").forEach(function(r){r.hidden=v&&r.cells[1].textContent!==v})}})();</script><p><a class="btn" href="../main.html">← Voltar ao painel</a></p></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p></footer>
+</body></html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerar Lote de Senhas Anônimas | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<header><small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small><h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../login.html">Login</a></li><li><a href="../main.html">Painel do Sistema</a></li></ul></nav></header>
+<main id="conteudo-principal"><section><h2>Gerar Lote de Senhas Anônimas (US-ADM-04)</h2><p>Gere senhas únicas e anônimas, associadas a uma categoria de participantes.</p></section><section><h2>Novo lote</h2><form id="gf">
+<label for="c">Categoria</label><select id="c"><option>Alunos</option><option>Professores</option><option>Colaboradores</option></select>
+<label for="n">Quantidade de senhas</label><input id="n" type="number" min="1" max="500" value="10" required>
+<p><button type="submit">Gerar lote</button> <button type="button" id="dl" class="sec">Baixar CSV</button></p></form></section>
+<section><h2>Senhas geradas</h2><p class="hint" id="m" role="status">Nenhum lote gerado.</p><table><thead><tr><th>#</th><th>Senha</th><th>Categoria</th></tr></thead><tbody id="tb"></tbody></table></section><script>(function(){var R=document.currentScript.parentElement;function q(s){return R.querySelector(s)}var A="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",L=[];function g(){var u=new Uint32Array(8);crypto.getRandomValues(u);return Array.prototype.map.call(u,function(v){return A[v%A.length]}).join("")}
+q("#gf").addEventListener("submit",function(e){e.preventDefault();var n=+q("#n").value,c=q("#c").value,b=q("#tb");b.innerHTML="";L=[];for(var i=1;i<=n;i++){var s=g();L.push([i,s,c]);var r=b.insertRow();L[i-1].forEach(function(v){r.insertCell().textContent=v})}q("#m").textContent=n+" senhas geradas para "+c+". Cada senha só pode ser usada uma vez."});
+q("#dl").addEventListener("click",function(){var t="numero;senha;categoria\n"+L.map(function(r){return r.join(";")}).join("\n");var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download="senhas.csv";a.click()})})();</script><p><a class="btn" href="../main.html">← Voltar ao painel</a></p></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p></footer>
+</body></html>

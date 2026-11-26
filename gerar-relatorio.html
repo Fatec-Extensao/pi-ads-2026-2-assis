@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerar Relatório de Resultados | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<header><small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small><h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../login.html">Login</a></li><li><a href="../main.html">Painel do Sistema</a></li></ul></nav></header>
+<main id="conteudo-principal"><section><h2>Gerar Relatório de Resultados (US-ADM-05)</h2><p>Gere relatórios estatísticos por pergunta, categoria ou comparativos. Os valores abaixo são de exemplo.</p></section><section><h2>Parâmetros</h2><form id="rf"><label for="p">Pesquisa</label><select id="p"><option>Satisfação Institucional 2026</option><option>Clima Organizacional</option></select>
+<label for="t">Tipo de relatório</label><select id="t"><option value="q">Por pergunta</option><option value="c">Por categoria</option><option value="k">Comparativo entre categorias</option></select>
+<p><button type="submit">Gerar relatório</button> <button type="button" id="pr" class="sec">Exportar PDF (imprimir)</button></p></form></section>
+<section><h2>Resultado</h2><div id="o"><p class="hint">Selecione os parâmetros e gere o relatório.</p></div></section><script>(function(){var R=document.currentScript.parentElement;function q(s){return R.querySelector(s)}var D={q:[["Como avalia a infraestrutura?","62% Boa","25% Regular","13% Ruim"],["Recomendaria a instituição?","78% Sim","22% Não","—"]],c:[["Alunos","120","96","80%"],["Professores","40","31","77,5%"],["Colaboradores","25","20","80%"]],k:[["Alunos","4,1","—","—"],["Professores","4,4","—","—"],["Colaboradores","3,9","—","—"]]},H={q:["Pergunta","Resp. 1","Resp. 2","Resp. 3"],c:["Categoria","Senhas","Respostas","Participação"],k:["Categoria","Média de satisfação","",""]};
+q("#rf").addEventListener("submit",function(e){e.preventDefault();var t=q("#t").value,h="<table><thead><tr>"+H[t].map(function(x){return"<th>"+x+"</th>"}).join("")+"</tr></thead><tbody>"+D[t].map(function(r){return"<tr>"+r.map(function(x){return"<td>"+x+"</td>"}).join("")+"</tr>"}).join("")+"</tbody></table>";q("#o").innerHTML=h});
+q("#pr").addEventListener("click",function(){window.print()})})();</script><p><a class="btn" href="../main.html">← Voltar ao painel</a></p></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p></footer>
+</body></html>

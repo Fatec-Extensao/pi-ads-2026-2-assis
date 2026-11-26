@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Acesso autenticado ao Anderson Pesquisas Questionários.">
+<title>Login | Anderson Pesquisas Questionários</title>
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<a class="skip" href="#conteudo-principal">Pular para o conteúdo principal</a>
+<header>
+<small>Centro Estadual de Educação Tecnológica Paula Souza — Fatec Lins</small>
+<h1>Anderson Pesquisas Questionários</h1>
+<nav aria-label="Navegação principal"><ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="login.html" aria-current="page">Login</a></li>
+<li><a href="main.html">Painel do Sistema</a></li>
+</ul></nav>
+</header>
+<main id="conteudo-principal"><section><h2>Acesso ao Sistema</h2>
+<figure><svg role="img" aria-label="Ícone de uma pessoa ao lado de um cadeado fechado, representando autenticação segura" viewBox="0 0 120 70" width="120"><circle cx="30" cy="20" r="14" fill="#1f3a5f"/><path d="M6 64c0-18 12-26 24-26s24 8 24 26z" fill="#1f3a5f"/><rect x="74" y="34" width="34" height="28" rx="4" fill="#8a1c1c"/><path d="M80 34v-8a11 11 0 0 1 22 0v8" fill="none" stroke="#8a1c1c" stroke-width="5"/></svg>
+<figcaption>Autentique-se para acessar as funcionalidades do seu perfil.</figcaption></figure>
+<p>Utilize suas credenciais institucionais para entrar no sistema. Caso você seja um <strong>Participante</strong> de pesquisa, utilize a senha anônima recebida na opção "Acessar pesquisa com senha", disponível após o login.</p>
+<form id="f" action="main.html"><fieldset><legend><strong>Dados de acesso</strong></legend>
+<label for="u">Usuário ou e-mail institucional</label><input id="u" type="text" required><p class="hint">Informe o e-mail cadastrado no sistema institucional.</p>
+<label for="s">Senha</label><input id="s" type="password" minlength="8" required><p class="hint">Mínimo de 8 caracteres.</p>
+<label for="p">Perfil de acesso</label><select id="p" required><option value="">* Selecione seu perfil</option><option>Administrador</option><option>Secretaria</option><option>Analista de Dados</option><option>Suporte Técnico</option><option>Auditor</option></select>
+<p class="hint">O perfil define quais funcionalidades estarão visíveis no painel.</p>
+<label class="chk"><input type="checkbox"> Manter-me conectado neste dispositivo</label><p>
+<button type="submit">Entrar no sistema</button> <button type="reset" class="sec">Limpar campos</button></p></fieldset></form></section>
+<section><h2>É participante de uma pesquisa?</h2><p>Participantes não possuem conta no sistema. Utilize diretamente a senha anônima recebida para responder ao questionário.</p><a class="btn" href="pages/acessar-pesquisa.html">Acessar pesquisa com senha anônima →</a></section></main>
+<footer><p>Anderson Pesquisas Questionários — Fatec Lins — Projeto Integrador I — Lins-SP, 2026</p>
+<ul><li><a href="index.html">Início</a></li><li><a href="main.html">Painel</a></li></ul></footer>
+</body></html>
